@@ -37,7 +37,5 @@ public class TestConfiguration {
         return new GraphDatabaseFactory()
                 .newEmbeddedDatabaseBuilder(new File("test_graph.db"))
                 .newGraphDatabase();
-
     }
-
 }

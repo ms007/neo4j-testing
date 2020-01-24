@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import sbb.it.bahnknowhow.repository.KnowledgeEntriesRepository;
+import sbb.it.bahnknowhow.repositories.KnowledgeEntriesRepository;
 import sbb.it.bahnknowhow.domain.KnowledgeEntry;
 import sbb.it.bahnknowhow.services.KnowledgeEntriesService;
 

@@ -1,6 +1,5 @@
 package sbb.it.bahnknowhow.services;
 
-import com.google.common.collect.Iterables;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,7 +10,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import sbb.it.bahnknowhow.TestConfiguration;
 import sbb.it.bahnknowhow.domain.KnowledgeEntry;
-import sbb.it.bahnknowhow.repository.KnowledgeEntriesRepository;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -19,30 +17,29 @@ import static org.junit.Assert.assertNotNull;
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = {TestConfiguration.class})
 @DataNeo4jTest
-public class ServiceTests {
+public class KnowledgeEntriesServiceTests {
 
     @Autowired
-    private KnowledgeEntriesRepository repository;
+    private KnowledgeEntriesService service;
 
     @Before
     public void initializeDatabase() {
         System.out.println("seeding embedded database");
-    }
-
-    @Test
-    @DirtiesContext
-    public void testFindAll() {
-        System.out.println("findByTitle");
 
         var knowledgeEntry = new KnowledgeEntry();
         knowledgeEntry.setTitle("Bahnknowhow");
 
-        repository.save(knowledgeEntry);
+        service.save(knowledgeEntry);
+    }
 
-        var result = repository.findAll();
+    @Test
+    @DirtiesContext
+    public void getAllKnowledgeEntries() {
+        System.out.println("getAllKnowledgeEntries");
+
+        var result = service.getAllKnowledgeEntries();
         assertNotNull(result);
 
-        var size = Iterables.size(result);
-        assertEquals(1, size);
+        assertEquals(1, result.size());
     }
 }

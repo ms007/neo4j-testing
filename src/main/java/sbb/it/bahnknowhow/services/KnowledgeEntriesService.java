@@ -3,7 +3,7 @@ package sbb.it.bahnknowhow.services;
 import com.google.common.collect.Lists;
 import org.springframework.stereotype.Service;
 import sbb.it.bahnknowhow.domain.KnowledgeEntry;
-import sbb.it.bahnknowhow.repository.KnowledgeEntriesRepository;
+import sbb.it.bahnknowhow.repositories.KnowledgeEntriesRepository;
 
 import java.util.List;
 

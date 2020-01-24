@@ -32,3 +32,5 @@ build/
 
 ### Other ###
 logs
+test_graph.db
+store_lock

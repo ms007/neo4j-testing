@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 import sbb.it.bahnknowhow.domain.KnowledgeEntry;
 import sbb.it.bahnknowhow.domain.KnowledgeEntryParents;
-import sbb.it.bahnknowhow.repository.KnowledgeEntriesRepository;
+import sbb.it.bahnknowhow.repositories.KnowledgeEntriesRepository;
 
 @RestController()
 public class KnowledgeEntriesParentsController {

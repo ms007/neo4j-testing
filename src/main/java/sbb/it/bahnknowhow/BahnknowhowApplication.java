@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.neo4j.repository.config.EnableNeo4jRepositories;
 
 @SpringBootApplication
-@EnableNeo4jRepositories("sbb.it.bahnknowhow.repository")
+@EnableNeo4jRepositories("sbb.it.bahnknowhow.repositories")
 public class BahnknowhowApplication {
     public static void main(String[] args) {
         SpringApplication.run(BahnknowhowApplication.class, args);
